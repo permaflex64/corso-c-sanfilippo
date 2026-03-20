@@ -1,0 +1,21 @@
+#ifndef ESERCIZI_H_
+#define ESERCIZI_H_
+
+// Dichiarazione delle funzioni (prototipi)
+void hello_main();
+void lez2_main();
+int lez3_main();
+int lez3_2_main();
+int lez4_main();
+int lez5_main();
+int lez6_if_main();
+int lez6_loop_main();
+int lez7_main();
+int lez8_main();
+
+
+
+//int albero_main();
+
+
+#endif

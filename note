@@ -1,0 +1,43 @@
+porre attenzione: il ciclo e' Clean, Build (eseguiti insieme impostando colla finestra del clean) quindi appaiono i warnings e quind Run, n.b. va switchata la consolle
+
+Clean... shortcut non va, da menu Project
+Ctrl+B Build
+Ctrl+f11 Run
+per vedere i risultati switcha la console dal menu a tendina
+
+
+Lez 6
+ogni volta che viene richiamata conta(start,end) vengono create sullo stack due variabili intere
+
+questo e' l'otput con gli indirizzi di memoria
+
+0x7ffe44516a0c 0x7ffe44516a08 <--
+0§
+0x7ffe445169ec 0x7ffe445169e8
+1§
+0x7ffe445169cc 0x7ffe445169c8
+2§
+0x7ffe445169ac 0x7ffe445169a8
+3§
+0x7ffe4451698c 0x7ffe44516988
+4§
+0x7ffe4451696c 0x7ffe44516968
+5§
+0x7ffe4451694c 0x7ffe44516948
+6§
+0x7ffe4451692c 0x7ffe44516928
+7§
+0x7ffe4451690c 0x7ffe44516908
+8§
+0x7ffe445168ec 0x7ffe445168e8
+9§
+0x7ffe445168cc 0x7ffe445168c8 <--
+
+quindi calcolo la memoria usata
+
+>bc
+ibase=16
+6A08-68C8 <-- diff indirizzi partenza - fine
+320 <-- 320kb usati dello stack per un puntatore di 4byte
+
+

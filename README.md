@@ -3,6 +3,7 @@ Esercizi e appunti realizzati seguendo la playlist di Salvatore Sanfilippo sul s
 
 ## Struttura del progetto
 * **src/**: Contiene le cartelle divise per lezione.
+* **src/varie**: Codice al di fuori del progetto.
 * **esercizi.h**: Header comune per i prototipi.
 * **salvatore_sanfilippo.c**: Main "regista" del progetto.
 

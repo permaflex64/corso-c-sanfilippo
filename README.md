@@ -1,5 +1,5 @@
 # Corso C - Salvatore Sanfilippo (antirez)
-Esercizi e appunti realizzati seguendo la playlist di Salvatore Sanfilippo.
+Esercizi e appunti realizzati seguendo la playlist di Salvatore Sanfilippo sul suo canale youtube.
 
 ## Struttura del progetto
 * **src/**: Contiene le cartelle divise per lezione.

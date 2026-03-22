@@ -23,7 +23,8 @@ int main(void) {
 //	lez6_loop_main();
 //	lez7_main();
 //	lez8_main();
-	chat_gemini_main();
+//	chat_gemini_main();
+	lez9_main();
 
 //	albero_main();
 
@@ -32,7 +33,3 @@ int main(void) {
 }
 
 
-//int main(void) {
-//	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
-//	return EXIT_SUCCESS;
-//}

@@ -8,7 +8,7 @@
 #include <limits.h>
 #include "esercizi.h"
 
-int incr(int x) {
+static int incr(int x) {
 	x = x + 1;
 	return x;
 }

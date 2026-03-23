@@ -24,7 +24,66 @@ static void uso_di_incr() {
 	printf("x now is %d\n", x);
 }
 
+static void analisi_var_e_punt() {
+
+	int x = 5;
+	int *y = &x;
+	int **z = &y;
+	printf("x is stored in %p and y is stored in %p\n", y, z);
+	printf("%d %d %d\n", (int) sizeof(x), (int) sizeof(y), (int) sizeof(z));
+
+}
+
+static void array_di_char() {
+	char mystr[] = "Hello World";
+	char *p = mystr;
+	printf("%d\n",*p);//prima
+	printf("a %p I can see: %s\n",mystr,mystr);//mystr e' sia puntatore che valore
+	printf("%c\n", 65);
+	printf("%c%c%c%c%c\n", p[0], p[1], p[2], p[3], p[4]);
+	printf("%c%c%c%c%c\n", *p, *(p + 1), *(p + 2), *(p + 3), *(p + 4));
+//	printf("%c%c%c%c%c\n", *p, *(p++), *(p++), *(p++), *(p++));//?il puntatore punta alla o
+	printf("%d\n",*p);//dopo
+}
+
+static void array_di_char_2() {
+	char mystr[] = "AABBCCDDEEFF";
+	short *p = (short*)mystr;
+	short *old_p = p;
+	printf("%d %p %d\n",*p,p);//,(int)sizeof(p));
+	p++;
+	printf("%d %p\n",*p,p);
+	p = old_p;
+	printf("%d %p\n",*p,p);
+
+//	printf("%s",mystr);
+//	*p = (short)'Z';
+//	printf("%s  %c %p",mystr,*p,p);
+
+	p +=4; //punta EE == 69,  69*(69*256) 17733
+	printf("%d\n",*p);
+	p = old_p;
+	while(*p != 0){
+		putchar(*p);
+		p++;
+	}
+
+	printf("\n");
+
+	char *p2 = mystr;
+	while(*p2 != 0){
+		putchar(*p2);
+		p2++;
+	}
+
+
+}
+
+
 int lez10_main() {
-	uso_di_incr();
+//	uso_di_incr();
+//	analisi_var_e_punt();
+//	array_di_char();
+	array_di_char_2();
 	return 0;
 }

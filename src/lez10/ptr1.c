@@ -9,7 +9,7 @@
 #include "esercizi.h"
 
 static void incr(int *p) {
-//	*p = *p + 1;
+	printf("Before incr: %d\n", *p);
 	p[0] = p[0] + 1;
 }
 

@@ -50,7 +50,7 @@ static void array_di_char_2() {
 	char mystr[] = "AABBCCDDEEFF";
 	short *p = (short*)mystr;
 	short *old_p = p;
-	printf("%d %p %d\n",*p,p);//,(int)sizeof(p));
+	printf("%d %p\n",*p,p);//,(int)sizeof(p));
 	p++;
 	printf("%d %p\n",*p,p);
 	p = old_p;
@@ -71,11 +71,17 @@ static void array_di_char_2() {
 	printf("\n");
 
 	char *p2 = mystr;
+	char *old_p2 = p2;
 	while(*p2 != 0){
 		putchar(*p2);
 		p2++;
 	}
 
+	printf("\n");
+	printf("i puntatori hanno dimensioni p=%d p2=%d mentre i tipi  char=%d short=%d ,sono loro che deteminano il passo di avanzamento nello scorrere l'array mystr\n",
+			(int)sizeof(p),(int)sizeof(p2), (int)sizeof(char), (int)sizeof(short));
+
+	printf("At the end p2 is %p and old_p2 at the beginning is %p\n",p2,old_p2);
 
 }
 

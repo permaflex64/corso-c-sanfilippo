@@ -56,10 +56,6 @@ static void array_di_char_2() {
 	p = old_p;
 	printf("%d %p\n", *p, p);
 
-//	printf("%s",mystr);
-//	*p = (short)'Z';
-//	printf("%s  %c %p",mystr,*p,p);
-
 	p += 4; //punta EE == 69,  69*(69*256) 17733
 	printf("%d\n", *p);
 	p = old_p;
@@ -101,13 +97,6 @@ static void array_di_char_3() {
 	printf("\n");
 	printf("At the end p is %lu\n",p);
 	printf("At the end p is %p\n",p);
-//	p = old_p;
-//	*p = "AABBCCDDEE.FF";
-////	printf("%s\n", mystr);
-//	while(*p != '.'){
-//		putchar(*p);
-//		p++;
-//	}
 
 }
 
@@ -136,15 +125,15 @@ static void printstr(char* p, char check){
 
 static void test_printstr(){
 	char mystr[] = "AABBCCDDEE.FF";
-	char *p = mystr;
-	char check = '.';
-	printstr(mystr,check);
-	p = "AABBCCDDEEFF";
-	check = 0;
-	printstr(p,check);
+	char *p = "AABBCCDDEEFF";
+	char *origin_p = p;
+	printstr(mystr,'.');
+	printstr(p,0);
 	printstr(mystr+3,'.');
-//	printstr(mystr,check);
-//	printstr(mystr,check);
+	p = mystr;
+	printstr(p+3,'.');
+//	mystr = origin_p; //?mystr si comporta come un puntatore ma non lo e'
+//	printstr(mystr,0);
 }
 
 int lez10_main() {

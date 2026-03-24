@@ -41,3 +41,7 @@ ibase=16
 320 <-- 320kb usati dello stack per un puntatore di 4byte
 
 
+
+--> ripendere a 24:32 costruire nuova funzione, inizio uso unsigned long 
+
+

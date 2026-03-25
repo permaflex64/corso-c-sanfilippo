@@ -26,7 +26,8 @@ int main(void) {
 //	chat_gemini_main();
 //	lez9_main();
 //	lez10_main();
-	lez11_main();
+//	lez11_main();
+	pls_main();
 
 //	albero_main();
 

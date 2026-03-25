@@ -16,6 +16,7 @@ int chat_gemini_main();
 int lez9_main();
 int lez10_main();
 int lez11_main();
+int pls_main();
 
 
 

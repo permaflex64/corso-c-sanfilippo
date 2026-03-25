@@ -31,8 +31,9 @@ int pls_main() {
 	printf("lezione 12\n");
 	char buf[256];
 	ps_init(buf, "Hello World", 11);
-	printf("%s %s\n", buf,
-			"la stringa e' stata riempita a partire dalla seconda posizione di buf");
+	printf("%s %s %d:\n", buf,
+			"la stringa e' stata riempita a partire dalla seconda posizione di buf, "
+			"la prima posizione e' la lunghezza ", buf[0]);
 	ps_print(buf);
 	ps_print(buf);
 

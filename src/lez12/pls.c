@@ -3,11 +3,16 @@
  *
  * Prefixed Length String
  *
+ * Le stringhe in Pascal ed in C hanno formati diversi, queste
+ * funzioni puntano all'interoperabilita
+ *
  *  Created on: Mar 25, 2026
  *      Author: navigazione
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+
 #include "esercizi.h"
 
 //static char* my_ps_create(char *s, int len) {

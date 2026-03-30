@@ -18,6 +18,7 @@ int lez10_main();
 int lez11_main();
 int pls_main();
 int pls2_main();
+int pls3_main();
 
 
 

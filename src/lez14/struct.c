@@ -5,8 +5,6 @@
  *      Author: navigazione
  */
 #include <stdint.h>
-#include <stdio.h>
-
 
 struct ps {
 	uint32_t len;

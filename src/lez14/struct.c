@@ -14,6 +14,57 @@
 
 #include "esercizi.h"
 
+/*Internal layout
+ *
+ * +----+-----+
+ * |num | dem |
+ * +----+-----+
+ * */
+struct fract{
+	int num;
+	int den;
+};
+
+#if 0
+//varie implementazioni di fract per ragionare sull'occupazione di memoria
+//di una struct.
+/*Internal layout
+ * P = padding
+ * +----+----+-----+
+ * |cPPP|num | den |
+ * +----+----+-----+
+ * */
+struct fract{
+	unsigned char color;
+	int num;
+	int den;
+};
+
+/*Internal layout
+ *
+ * +----+----+----+
+ * |num |den |abcd|
+ * +----+----+----+
+ * */
+struct fract {
+	int num;
+	int den;
+	unsigned char a;
+	unsigned char b;
+	unsigned char c;
+	unsigned char d;
+};
+
+struct fract {
+	unsigned char a;
+	int num;
+	unsigned char b;
+	int den;
+	unsigned char c;
+	unsigned char d;
+};
+#endif
+
 static void set_fraction(int *f, int num, int den) {
 #if 0
 	f[0] = num;
@@ -69,9 +120,33 @@ static void fraction_completo_senza_struct() {
 	print_fraction(f2);
 }
 
+static void intro_a_struct(){
+
+	printf("%d\n", (int) sizeof(struct fract));
+
+	/* puntatore, medesima area di memoria */
+	struct fract a;
+	struct fract *b = &a;
+	a.num = 1;
+	a.den = 2;
+	printf("%d %d\n", a.num, a.den);
+	b->num = 10;
+	b->den = 20;
+	printf("%d %d\n", a.num, a.den);
+
+	/* copia, due distinte aree di memoria */
+	struct fract c = a; //copia di a
+	printf("a: %d %d\n", a.num, a.den);
+	printf("c: %d %d\n", c.num, c.den);
+	c.num = 100;
+	c.den = 200;
+	printf("c: %d %d\n", c.num, c.den);
+}
+
 int struct_main() {
 //	fraction_first_version();
-	fraction_completo_senza_struct();
+//	fraction_completo_senza_struct();
+	intro_a_struct();
 
 	return 0;
 }

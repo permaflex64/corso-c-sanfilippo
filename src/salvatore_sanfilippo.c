@@ -30,7 +30,8 @@ int main(void) {
 //	pls_main();
 //	pls2_main();
 //	pls3_main();
-	struct_main();
+//	struct_main();
+	struct2_main();
 
 
 //	albero_main();

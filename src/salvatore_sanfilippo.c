@@ -29,7 +29,8 @@ int main(void) {
 //	lez11_main();
 //	pls_main();
 //	pls2_main();
-	pls3_main();
+//	pls3_main();
+	struct_main();
 
 
 //	albero_main();

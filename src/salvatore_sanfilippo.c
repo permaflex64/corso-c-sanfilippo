@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include "esercizi.h"
 
-int main(void) {
+int main(int argc, char **argv) {
 	hello_main();
 //	lez2_main();
 //	lez3_main();
@@ -31,7 +31,9 @@ int main(void) {
 //	pls2_main();
 //	pls3_main();
 //	struct_main();
-	struct2_main();
+//	struct2_main();
+	tac_main(argc, argv);
+
 
 
 //	albero_main();

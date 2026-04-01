@@ -1,3 +1,17 @@
+compilazione da terminale ponendosi nella root del progetto
+
+gcc salvatore_sanfilippo.c lez1/hello.c lez2/hello.c -I. -o mio_programma
+
+
+./mio_programma
+
+
+
+
+
+
+
+
 porre attenzione: il ciclo e' Clean, Build (eseguiti insieme impostando colla finestra del clean) quindi appaiono i warnings e quind Run, n.b. va switchata la consolle
 
 Clean... shortcut non va, da menu Project

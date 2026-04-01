@@ -21,6 +21,8 @@ int pls2_main();
 int pls3_main();
 int struct_main();
 int struct2_main();
+int tac_main(int argc, char **argv);
+//int tac_main();
 
 
 

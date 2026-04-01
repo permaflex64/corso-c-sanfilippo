@@ -8,6 +8,11 @@
 #include <stdio.h>
 #include "esercizi.h"
 
+struct line {
+	char *s;
+	struct line *next;
+};
+
 #define NOME_FILE "src/lez15/tac.c"
 
 #if 0
@@ -26,18 +31,34 @@ int tac_main(int argc, char **argv) {
 		printf("Missing file name\n");
 		return 1;
 	}
-	printf("%s\n",argv[0]);
-	FILE *fp = fopen(argv[1],"r");
+	printf("%s\n", argv[0]);
+	FILE *fp = fopen(argv[1], "r");
 	if (fp == NULL) {
 		printf("File does not exist\n");
 		return 1;
 	}
 
 	char buf[1024];
-	while(fgets(buf,sizeof(buf),fp) != NULL){
-		printf("%s\n",buf);
+	struct line *head = NULL;
+	while (fgets(buf, sizeof(buf), fp) != NULL) {
+//		printf("%s\n",buf);
+		struct line *l = malloc(sizeof(struct line));
+		size_t linelen = strlen(buf);
+//		printf("%d\n",linelen);
+		l->s = malloc(linelen+1);
+		for (int j = 0; j <= linelen; j++) {
+			printf("%c", buf[j]);
+			l->s[j] = buf[j];
+		}
+		l->next = head;
+		head = l;
+	}
+	fclose(fp);
+
+	while(head != NULL){
+		printf("%s", head->s);
+		head = head->next;
 	}
 
-	fclose(fp);
 	return 0;
 }

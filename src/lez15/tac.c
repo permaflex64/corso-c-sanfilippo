@@ -8,23 +8,36 @@
 #include <stdio.h>
 #include "esercizi.h"
 
+#define NOME_FILE "src/lez15/tac.c"
+
+#if 0
+// argc è il numero di argomenti (il nome del programma è il primo, quindi argc >= 1)
+// argv è un array di stringhe (puntatori a char)
 static void gemini_configurazione_main(int argc, char **argv) {
-
-	// argc è il numero di argomenti (il nome del programma è il primo, quindi argc >= 1)
-	// argv è un array di stringhe (puntatori a char)
-
-	printf("Ho ricevuto %d argomenti.\n", argc - 1);
-
-	if (argc > 1) {
-		printf("Il primo argomento è: %s\n", argv[1]);
+	for (int i = 0; i < argc; ++i) {
+		printf("%d:%s\n", i, argv[i]);
 	}
-
 }
+#endif
 
-//int tac_main(){
 int tac_main(int argc, char **argv) {
 	printf("lezione 15\n");
-	gemini_configurazione_main(argc, argv);
+	if (argc != 2) {
+		printf("Missing file name\n");
+		return 1;
+	}
+	printf("%s\n",argv[0]);
+	FILE *fp = fopen(argv[1],"r");
+	if (fp == NULL) {
+		printf("File does not exist\n");
+		return 1;
+	}
 
+	char buf[1024];
+	while(fgets(buf,sizeof(buf),fp) != NULL){
+		printf("%s\n",buf);
+	}
+
+	fclose(fp);
 	return 0;
 }
